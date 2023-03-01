@@ -13,4 +13,57 @@ body {
         color: #fff;
         text-shadow: 0px 0px 15px #000;
     }
+    label,
+    .label {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    ul {
+        list-style: none;
+    }
+    .alert {
+        min-height: 65px;
+    }
+
+    // *****
+    .custom-list {
+        max-height: 127px;
+        &-item {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+    .list-bills {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-right: 15px;
+    }
+
+    // *** Custom scrollbar ***
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 }

@@ -15,9 +15,9 @@ export class BillsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // if( this._budgetService.budget === 0 ) {
-    //   this.router.navigate(['/enter-budget']);
-    // }
+    if( this._budgetService.budget === 0 ) {
+      this.router.navigate(['/enter-budget']);
+    }
   }
 
 }

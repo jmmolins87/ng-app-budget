@@ -1,1 +1,28 @@
-<p>list-expenses works!</p>
+<div class="row">
+    <div class="col-12">
+        <h4 class="text-center border-bottom pb-3">Listado de gastos</h4>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-6">
+        <div class="alert alert-success text-center">
+            <span>Prsupuesto: <span class="label">{{ budget }}</span>€</span>
+        </div>
+    </div>
+    <div class="col-6">
+        <div [ngClass]="{ 'alert-danger' : remaining < 0, 'alert-warning' : remaining === 0 || remaining <= 100 }" class="alert text-center">
+            <span>Restante: <span class="label">{{ remaining }}</span>€</span> 
+        </div>
+    </div>
+</div>
+<div class="list-bills">
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group list-group-flush custom-list">
+                <ng-container *ngFor="let bill of listBills">
+                    <li class="custom-list-item"><span>{{ bill.name | titlecase }}:</span><span class="badge rounded-pill text-bg-secondary">{{ bill.amount }}€</span></li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
